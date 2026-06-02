@@ -1,0 +1,4 @@
+export const LOADING_STATE="LOADING_STATE";
+export const BOOK_SUCCESS="BOOK_SUCCESS";
+export const BOOK_FAILURE="BOOK_FAILURE";
+export const SORTING="SORTING";
