@@ -11,7 +11,13 @@ function bookListReducer(state=initialState,action){
     return {...state,loading:true};
   }
   else if(action.type===BOOK_SUCCESS){
-    return {...state,loading:false,data:action.payload,error:""};
+    let arr=action.payload;
+    arr.sort((obj1,obj2)=>{
+        if(obj1.title.toLowerCase()<obj2.title.toLowerCase())return -1;
+        else if(obj1.title.toLowerCase()>obj2.title.toLowerCase()) return 1;
+        
+    })
+    return {...state,loading:false,data:arr,error:""};
   }
   else if(action.type===BOOK_FAILURE){
     return {...state,loading:false,data:[],error:action.payload};
