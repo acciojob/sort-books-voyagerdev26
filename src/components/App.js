@@ -48,7 +48,7 @@ const App = () => {
           <h1>Books List</h1>
 
            {/* First Dropdown */}
-          <label>sort by</label>
+          <label>Sort by:</label>
           <select value={sortBy} onChange={(e)=>{setSortBy(e.target.value);dispatch(sorting(e.target.value, sortOrder))}}>
             <option value="title">Title</option>
             <option value="author">Author</option>
@@ -56,7 +56,7 @@ const App = () => {
           </select>
 
           {/* Second Dropdown */}
-          <label>order</label>
+          <label>Order:</label>
           <select value={sortOrder} onChange={(e)=>{setSortOrder(e.target.value);dispatch(sorting(sortBy, e.target.value))}}>
             <option value="ascending">Ascending</option>
             <option value="descending">Descending</option>
